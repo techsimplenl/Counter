@@ -6,8 +6,8 @@ This containerized application allows you to easily deploy and run the counter a
 ## PREREQUISITES ##
 
 Before you begin, ensure that you have the following software installed on your machine:
-. Docker
-. Git
+1. Docker
+2. Git
 
 ## GETTING STARTED ##
 
