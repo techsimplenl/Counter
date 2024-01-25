@@ -13,4 +13,8 @@ GETTING STARTED
 
 1. Clone the repository to your local machine: git clone https://github.com/techsimplenl/Counter.git
 2. Navigate to the project directory: cd /path/to/Counter
-3. 
+3. Build the Docker image: docker build -t name_of_docker_from_your_choice:version .
+4. Running the Application in Docker: docker run -d -p 8000:8000 --name containername name_of_docker_from_your_choice:version
+5. Visit http://localhost:8000/counter with the initial value in the request in json format
+6. Dont forget to specify in headers the content-type as application/json as the server accept only json format data
+7. 
