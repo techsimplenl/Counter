@@ -18,9 +18,6 @@ COPY . /app/
 # Expose the port that Flask will run on
 EXPOSE 8000
 
-# Define environment variable for Flask
-# ENV FLASK_APP=app.py
-
 # Command to run on container start
 CMD './entrypoint.sh'
-# CMD ["flask", "run", "--host=0.0.0.0"]
+

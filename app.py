@@ -1,4 +1,5 @@
 """APP MODULE"""
+
 import os
 from dotenv import load_dotenv
 from flask import Flask
@@ -17,12 +18,6 @@ def create_app():
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     app.config['SECRET_KEY'] = os.getenv("SECRET_KEY")
     db.init_app(app)
-    # Ensure that the database connection is closed after each request
-    @app.after_request
-    def after_request(response):
-        db.session.close()
-        return response
-    
     # Register the counter blueprint
     app.register_blueprint(counter_bp)
     return app
