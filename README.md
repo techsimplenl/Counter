@@ -9,4 +9,8 @@ Before you begin, ensure that you have the following software installed on your 
 . Docker
 . Git
 
+GETTING STARTED
 
+1. Clone the repository to your local machine: git clone https://github.com/techsimplenl/Counter.git
+2. Navigate to the project directory: cd /path/to/Counter
+3. 
