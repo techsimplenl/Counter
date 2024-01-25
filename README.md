@@ -1,18 +1,15 @@
-COUNTER API SERVICE WITH DOCKER
-__________________________________
+##COUNTER API SERVICE WITH DOCKER##
 
 This readme file provides instructions on how to use the api that is containerized using Docker. 
 This containerized application allows you to easily deploy and run the counter application in a consistent and isolated environment.
 
-PREREQUISITES
-______________
+##PREREQUISITES##
 
 Before you begin, ensure that you have the following software installed on your machine:
 . Docker
 . Git
 
-GETTING STARTED
-______________________
+##GETTING STARTED##
 
 1. Clone the repository to your local machine: git clone https://github.com/techsimplenl/Counter.git
 2. Navigate to the project directory: cd /path/to/Counter
@@ -22,6 +19,5 @@ ______________________
 6. Don't forget to include the Content-Type header in your requests and set it to application/json, as the server exclusively accepts data in JSON format
 
 ## HINTS ##
-___________
 
 The application is developed using the Flask framework, which is exceptionally well-suited for building simple and compact web applications due to its lightweight and modular nature
