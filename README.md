@@ -1,4 +1,4 @@
-##COUNTER API SERVICE WITH DOCKER##
+## COUNTER API SERVICE WITH DOCKER ##
 
 This readme file provides instructions on how to use the api that is containerized using Docker. 
 This containerized application allows you to easily deploy and run the counter application in a consistent and isolated environment.
