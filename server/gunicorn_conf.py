@@ -2,13 +2,13 @@
 # Importing necessary module for the Gunicorn BaseApplication
 from gunicorn.app.base import BaseApplication
 
-class FlaskApplication(BaseApplication):
+class CounterApplication(BaseApplication):
     """Custom Gunicorn Application for running a Flask app."""
     def __init__(self, app, options=None):
-        """ Initialize the FlaskApplication."""
+        """ Initialize the CounterApplication."""
         self.options = options or {}
         self.application = app
-        super(FlaskApplication, self).__init__()
+        super(CounterApplication, self).__init__()
 
     def load_config(self):
         """Load Gunicorn configuration from the provided options."""
@@ -16,5 +16,5 @@ class FlaskApplication(BaseApplication):
         for key, value in config.items():
             self.cfg.set(key.lower(), value)
     def load(self):
-        """Load the Flask application."""
+        """Load the CounterApplication application."""
         return self.application

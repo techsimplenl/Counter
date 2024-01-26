@@ -4,7 +4,7 @@ from sqlalchemy.exc import IntegrityError
 from api.models import Counter,db
 from api.schemas import counter_schema
 
-# Create a Flask Blueprint for counter-related endpoints
+# Create Count Blueprint for counter-related endpoints
 counter_bp = Blueprint('counter', __name__, url_prefix='/counter')
 @counter_bp.route('', methods=['POST'])
 def create_counter():
@@ -43,8 +43,13 @@ def increment_counter(counter_id):
         if counter:
             counter.counter += 1
             db.session.commit()
-            return jsonify({'message': f'Counter incremented successfully with id {counter.id}.'}), 201
+            return jsonify({'message': f'Counter {counter.id} incremented successfully.'}), 201
         return jsonify({'error': 'No such counter exists.'}), 404
+    except IntegrityError:
+        # Rollback the session in case of an IntegrityError
+        db.session.rollback()
+        # Return a 400 status code with an error message
+        return jsonify({'error':f'No such counter.'}), 400
     except Exception as e:
         return jsonify({'error': str(e)}), 400
 @counter_bp.route('/<int:counter_id>', methods=['GET'])

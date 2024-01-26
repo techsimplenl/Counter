@@ -20,10 +20,12 @@ Before you begin, ensure that you have the following software installed on your 
 7. Additional routes in this application include http://localhost:8000/counter/:id, which support both GET and PATCH methods
 8. As the initial value is stored in the database, you have the flexibility to create multiple counters, each with a unique identifier.
 
-The application relies on an .env file to store critical global values crucial for its proper functioning. Please note that, for testing purposes, this file has been added to the Git repository
+
 
 ## HINTS ##
 
 The application is developed using the Flask framework, which is exceptionally well-suited for building simple and compact web applications due to its lightweight and modular nature
+
+The application relies on an .env file to store critical global values crucial for its proper functioning. Please note that, for testing purposes, this file has been added to the Git repository
 
 Have fun!
